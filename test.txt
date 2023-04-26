@@ -1,0 +1,18 @@
+public static void main(String[] args) {
+  String s1 = new String("hello");
+  String s2 = new String("hello");
+  String s3 = new String("Hello");
+
+// s1,s2,s3引用的是三个不同对象,因此==比较结果全部是false
+  System.out.println(s1 == s2); //false
+ System.out.println(s1 == s3); //false
+
+//equals比较:String对象中的逐个字符
+//虽然s1与s2引用的不是用一个对象,但是两个对象中放置的内容相同
+因此输出true
+//s1与s3引用的不是同一个对象,而且两个对象中内容也不同
+ 因此输出false
+ System.out.println(s1.equals(s2)); //true
+System.out.println(s1.equals(s3)); //false
+}
+
